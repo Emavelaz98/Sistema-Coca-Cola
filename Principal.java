@@ -13,7 +13,7 @@ public class Principal extends JFrame implements ActionListener{
 	private JScrollPane scrollpane1;
 	private JTextArea textarea1;
 	private JButton boton1;
-	//String nombreAdministrador = "";
+	String nombreAdministrador = "";
 
 	public Principal(){
 		setLayout(null);
@@ -21,8 +21,8 @@ public class Principal extends JFrame implements ActionListener{
 		setTitle("Pantalla Principal");
 		getContentPane().setBackground(new Color(255,0,0));
 		setIconImage(new ImageIcon(getClass().getResource("images/icon.png")).getImage());
-		/*Bienvenida ventbienvenida = new Bienvenida();
-		nombreAdministrador = ventbienvenida.texto;*/
+		Bienvenida ventbienvenida = new Bienvenida();
+		nombreAdministrador = ventbienvenida.texto;
 
 		//Menu
 		mb=new JMenuBar();
@@ -207,7 +207,7 @@ public class Principal extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent e){
 		if(e.getSource() == miCalculo){
 
-			/*String nombreTrabajador = txtNombreTrabajador.getText();
+			String nombreTrabajador = txtNombreTrabajador.getText();
 			String apellido = txtApellidoTrabajador.getText();
 			String Departamento = comboDepartamento.getSelectedItem().toString();
 			String Antiguedad = comboAntiguedad.getSelectedItem().toString();
@@ -304,9 +304,9 @@ public class Principal extends JFrame implements ActionListener{
 			JOptionPane.showMessageDialog(null, "  Este Software Fue creador por " + 
 												"\nLic.Emanuel Alejandro Velazquez " + 
 												"\n       @HolaMundoReview");
-		}*/
+		}
 	}
-}
+
 
 	public static void main(String args[]){
 		Principal ventprincipal = new Principal();

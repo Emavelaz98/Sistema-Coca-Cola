@@ -7,7 +7,7 @@ public class Bienvenida extends JFrame implements ActionListener{
 	private JTextField textfield1;
 	private JLabel label1,label2,label3,label4;
 	private JButton boton1;
-	//public static String texto = "";//Con este codigo pudeo usar la variable texto con otras Intrefaz
+	public static String texto = "";//Con este codigo pudeo usar la variable texto con otras Intrefaz
 
 	public Bienvenida(){
 		setLayout(null);
@@ -57,7 +57,7 @@ public class Bienvenida extends JFrame implements ActionListener{
 
 	public void actionPerformed(ActionEvent e){
 		if(e.getSource()==boton1){
-			/*texto = textfield1.getText().trim();//trim()->es para centar el texto que el usuario escribe con espacios, osea, borra los espacios y centra la palabra
+			texto = textfield1.getText().trim();//trim()->es para centar el texto que el usuario escribe con espacios, osea, borra los espacios y centra la palabra
 			if(texto.equals("")){
 				JOptionPane.showMessageDialog(null, "       Campo Incompleto\n"   +
 													"Debes Ingresar tu Nombre");
@@ -68,7 +68,7 @@ public class Bienvenida extends JFrame implements ActionListener{
 				ventlicencia.setLocationRelativeTo(null);
 				ventlicencia.setResizable(false);
 				this.setVisible(false);//para ocultar la pantalla de Bienvenida(Otras interfacez)
-			}*/
+			}
 		}
 	}
 

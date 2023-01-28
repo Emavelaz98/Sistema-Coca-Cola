@@ -10,15 +10,15 @@ public class Licencia extends JFrame implements ActionListener, ChangeListener{
 	private JButton boton1, boton2;
 	private JScrollPane scrollpane1;
 	private JTextArea textarea1;
-	//String nombre = "";
+	String nombre = "";
  
 	public Licencia(){
 		setLayout(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setTitle("Licencia de Uso");
 		setIconImage(new ImageIcon(getClass().getResource("images/icon.png")).getImage());
-		/*Bienvenida ventanaBienvenida = new Bienvenida(); //Codigo para visitar otra interfaz y agarrar variables para poder usar en esta interfaz
-		nombre = ventanaBienvenida.texto;*/
+		Bienvenida ventanaBienvenida = new Bienvenida(); //Codigo para visitar otra interfaz y agarrar variables para poder usar en esta interfaz
+		nombre = ventanaBienvenida.texto;
 
 		label1 = new JLabel("TERMINOS Y CONDICIONES");
 		label1.setBounds(210,5,200,30);
@@ -42,7 +42,7 @@ public class Licencia extends JFrame implements ActionListener, ChangeListener{
 		scrollpane1.setBounds(10,40,570,215);
 		add(scrollpane1);
 
-		check1=new JCheckBox("Yo  /*+ nombre + */ Acepto");
+		check1=new JCheckBox("Yo " + nombre + " Acepto");
 		check1.setBounds(10,250,300,30);
 		check1.addChangeListener(this);
 		add(check1);
@@ -76,8 +76,8 @@ public class Licencia extends JFrame implements ActionListener, ChangeListener{
 	}
 
 	public void actionPerformed(ActionEvent e){
-		//if(e.getSource()==boton1){
-			/*Principal ventprincipal = new Principal();
+		if(e.getSource()==boton1){
+			Principal ventprincipal = new Principal();
 			ventprincipal.setBounds(0,0,640,535);
 			ventprincipal.setVisible(true);
 			ventprincipal.setLocationRelativeTo(null);
@@ -90,7 +90,7 @@ public class Licencia extends JFrame implements ActionListener, ChangeListener{
 			ventbienvenida.setLocationRelativeTo(null);
 			ventbienvenida.setResizable(false);
 			this.setVisible(false);
-		}*/
+		}
 	}
 
 	public static void main(String args[]) {
